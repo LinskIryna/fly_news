@@ -1,0 +1,459 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ======================================= */
+
+#site-container {
+    width: 1157px;
+    margin: 0 auto;
+}
+
+#header {
+    display: flex;
+    padding-top: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#logo {
+    background: url("../imgs/logo1.jpg") top left no-repeat;
+    width: 166px;
+    height: 70px;
+    background-size: 100% 100%;
+}
+
+nav {
+    height: 70px;
+    z-index: 100;
+}
+
+nav li li {
+    display: none;
+}
+
+nav .submenu {
+
+}
+
+nav .submenu li {
+    list-style: none;
+}
+
+nav .submenu li a {
+    text-decoration: none;
+    font-size: 11px;
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    padding: 5px 60px 5px 145px;
+}
+
+nav > ul > li:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+nav > ul > li:hover li {
+    display: block;
+}
+
+nav > ul > li:hover a {
+    color: #fff;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #040404;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-right: 0;
+}
+
+nav > ul > li {
+    margin-right: 25px;
+}
+
+ul.social {
+    display: flex;
+    padding-top: 18px;
+}
+
+.social li {
+    width: 25px;
+    height: 25px;
+    background: url("../imgs/fb.png") top left no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    margin-right: 5px;
+}
+
+.social li.email { background: url("../imgs/email.png") top left no-repeat; }
+.social li.rss { background: url("../imgs/rss.png") top left no-repeat; }
+.social li.yt { background: url("../imgs/yt.png") top left no-repeat; }
+
+.social li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#search-icon {
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+#search-icon a {
+    width: 24px;
+    height: 24px;
+    background: url("../imgs/search_icon.png") top left no-repeat;
+    background-size: 100% 100%;
+    display: block;
+}
+
+.social {
+    padding-top: 18px;
+}
+
+#banners {
+    height: 490px;
+    width: 100%;
+    position: relative;
+}
+
+#banners h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 20px 50px;
+    color: #fff;
+    font-size: 40px;
+    width: 754px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#banners img {
+    width: 100%;
+}
+
+
+/** ====================  BANNERS  ===================  **/
+
+#banners {
+    position: relative;
+}
+
+#banners .banner.active {
+    opacity: 1;
+}
+
+#banners .banner {
+    width: 100%;
+    height: 495px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#banners .banner img {
+    width: 100%;
+    height: 100%;
+}
+
+#banners .banner a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/** ====================  NEWS  ===================  **/
+
+.news-list-container {
+    display: flex;
+    margin: 0;
+    padding: 150px 0 0;
+}
+
+.news-list-container li {
+    list-style: none;
+    padding-left: 50px;
+    position: relative;
+    height: 450px;
+}
+
+.news-list-container li:first-child {
+    padding-left: 0;
+}
+
+.news-list-container .content-type, #favorite-article-block .content-type {
+    color: #445466;
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+.news-list-container .date, #favorite-article-block .date {
+    color: #445466;
+    font-size: 15px;
+    padding: 15px 0;
+    position: absolute;
+    top: 240px;
+    right: 0;
+}
+
+.news-list-container .title, #favorite-article-block .title {
+    color: #040404;
+    font-size: 25px;
+    padding: 0 0 35px;
+    text-transform: uppercase;
+}
+
+.img-container {
+    height: 240px;
+    overflow: hidden;
+}
+
+
+#favorite-article-block {
+    margin: 0;
+    padding: 95px 0 0;
+}
+
+#favorite-article-block > li:first-child {
+    width: 750px;
+    position: relative;
+}
+
+#favorite-article-block > li:first-child .date {
+    top: 350px;
+}
+
+#favorite-article-block > li {
+    list-style: none;
+    float: left;
+    width: 400px;
+}
+
+#favorite-article-block h3 {
+    font-size: 24px;
+    color: #445466;
+    padding-bottom: 35px;
+}
+
+#favorite-article-block .news-list {
+    padding-left: 60px;
+}
+
+#favorite-article-block .news-list ul {
+    padding: 0;
+    margin: 0;
+}
+
+#favorite-article-block .news-list li {
+    font-size: 15px;
+    padding: 15px 0 20px;
+    list-style: none;
+}
+
+#favorite-article-block .news-list li a {
+    text-decoration: none;
+    color: #050505;
+}
+
+#favorite-article-block .news-list li .hr {
+    margin: 20px 25px 0;
+    border-top: 1px solid #697685;
+}
+
+
+#favorite-article-block .news-list .more-link {
+    background-color: #445466;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+#article-container {
+    background-color: #000;
+    clear: both;
+    position: relative;
+    margin-top: 20px;
+}
+
+#article-container ul {
+    padding: 0;
+    margin: 0;
+}
+
+#article-container ul li {
+    list-style: none;
+}
+
+#article-container img {
+    float: left;
+    margin: 10px 174px 10px 0;
+}
+
+#article-container .title, #article-container .description {
+    color: #fff;
+    font-size: 25px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    padding-right: 50px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 37px;
+    line-height: 35px;
+}
+
+#article-container .content-type, #article-container .date {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+#article-container .date {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+}
+
+.news-one {
+    height: 240px;
+    position: relative;
+}
+
+#article-container .title {
+    padding-top: 30px;
+}
+
+footer {
+    background: #445466;
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer > div, footer .column:first-child {
+    display: flex;
+}
+
+footer .column {
+    width: 33.3%;
+}
+
+footer .p {
+    padding: 10px 20px;
+}
+
+footer p {
+    padding: 10px 0;
+}
+
+#footer-logo {
+    background: #f2f5f8;
+    font-size: 36px;
+    margin: 15px 20px 0 0;
+    color: #445466;
+    height: 50px;
+}
+
+.br {
+    height: 40px;
+}
+
+
+
