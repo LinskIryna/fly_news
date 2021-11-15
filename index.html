@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title></title>
     <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/mobile.css" rel="stylesheet">
+    
+
 </head>
 <body>
 
@@ -11,28 +16,56 @@
 
     <div id="header">
         <div id="logo"></div>
+
+
         <nav>
-            <ul>
-                <li>
-                    <a href="">Новость</a>
-                    <ul class="submenu">
-                        <li><a href="">Статьи</a></li>
-                        <li><a href="">Туризм</a></li>
-                        <li><a href="">Стань авиатором</a></li>
-                    </ul>
+
+            <div id="menu-container">
+                <div id="menu-wrapper">
+                   <div id="hamburger-menu"><span></span><span></span><span></span></div>
+                   <!-- hamburger-menu -->
+                </div>
+
+            <ul class="menu-list accordion">
+
+                <li id="nav1" class="toggle accordion-toggle">
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="">новости</a>
                 </li>
-                <li><a href="">Статьи</a></li>
-                <li>
-                    <a href="">Туризм</a>
-                    <ul class="submenu">
-                        <li><a href="">Статьи</a></li>
-                        <li><a href="">Туризм</a></li>
-                        <li><a href="">Стань авиатором</a></li>
-                    </ul>
+                <ul class="submenu menu-submenu accordion-content">
+                    <li><a href="">Статьи</a></li>
+                    <li><a href="">Туризм</a></li>
+                    <li><a href="">Стань авиатором</a></li>
+                </ul>
+
+                <li id="nav2" class="toggle accordion-toggle">
+                    <a class="menu-link" href="">Статьи</a>
                 </li>
-                <li><a href="">Стань авиатором</a></li>
+
+                <li id="nav3" class="toggle accordion-toggle">
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="">Туризм</a>
+                </li>
+                <ul class="submenu menu-submenu accordion-content">
+                    <li><a href="">Статьи</a></li>
+                    <li><a href="">Туризм</a></li>
+                    <li><a href="">Стань авиатором</a></li>
+                </ul>
+
+                <li id="nav4" class="toggle accordion-toggle">
+                    <a class="menu-link" href="">Стань авиатором</a>
+                </li>
+
             </ul>
+
+        </div>
+    
+
         </nav>
+
+
+
+
         <ul class="social">
             <li class="fb"><a href="#"></a></li>
             <li class="email"><a href="#"></a></li>
@@ -217,6 +250,10 @@
     </footer>
 
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="js/mobile.js"></script>
 
 </body>
 </html>
