@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="./css/fonts.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
     <link href="./css/mobile.css" rel="stylesheet">
-
-
 </head>
 <body>
 
 <div id="site-container">
-
     <div id="header">
         <div id="logo"></div>
-
-
         <nav>
-
             <div id="menu-container">
                 <div id="menu-wrapper">
                    <div id="hamburger-menu"><span></span><span></span><span></span></div>
                    <!-- hamburger-menu -->
                 </div>
-
                 <ul class="menu-list accordion">
-
                     <li id="nav1" class="toggle accordion-toggle">
                         <span class="icon-plus"></span>
                         <a class="menu-link" href="">новости</a>
@@ -37,11 +32,9 @@
                             <li><a href="">Стань авиатором</a></li>
                         </ul>
                     </li>
-
                     <li id="nav2" class="toggle accordion-toggle">
                         <a class="menu-link" href="">Статьи</a>
                     </li>
-
                     <li id="nav3" class="toggle accordion-toggle">
                         <span class="icon-plus"></span>
                         <a class="menu-link" href="">Туризм</a>
@@ -82,18 +75,45 @@
 
     </div>
 
-    <div id="banners">
+<div id="banners">
+    <div id="line">
         <div class="banner active">
             <img src="imgs/banner1.png">
             <h2>МАУ завезет в Украину крупнейшие в истории страны пассажирские самолеты</h2>
             <a href=""></a>
         </div>
-            <div class="banner">
-                <img src="imgs/banner1.png">
-                <h2>МАУ завезет в Украину крупнейшие в истории страны пассажирские самолеты</h2>
-                <a href=""></a>
-            </div>
+        <div class="banner">
+            <img src="imgs/banner2.png">
+            <h2>Украину крупнейшие в истории страны пассажирские самолеты</h2>
+            <a href=""></a>
+        </div>
+        <div class="banner">
+            <img src="imgs/banner1.png">
+            <h2>МАУ завезет в Украину крупнейшие в истории страны пассажирские самолеты</h2>
+            <a href=""></a>
+        </div>
+        <div class="banner">
+            <img src="imgs/banner2.png">
+            <h2>Украину крупнейшие в истории страны пассажирские самолеты</h2>
+            <a href=""></a>
+        </div>
+        <div class="banner">
+            <img src="imgs/banner1.png">
+            <h2>МАУ завезет в Украину крупнейшие в истории страны пассажирские самолеты</h2>
+            <a href=""></a>
+        </div> 
     </div>
+</div>
+
+    <div class="prev">
+    <a  href="" onclick="scrolSlide('left', this); return false;">&laquo;</a>
+    </div>
+    
+    <div class="next">
+    <a href="" onclick="scrolSlide('right', this); return false;">&raquo;</a>
+    </div>
+
+
 
     <content>
         <div class="br"></div>
@@ -103,17 +123,18 @@
                     <div class="img-container"><img src="imgs/news/news1.png"></div>
                     <div class="content-type">News</div>
                     <div class="date">13/9</div>
-                    <div class="title">Контракт на 920 млн грн. </div>
-                    <div class="description">Мотор Січ збільшить ресурс двигунів Русланів і Мрії для ДП Антонов </div>
+                    <div class="title">Контракт на 920 млн грн.1</div>
+                    <div class="description">Мотор Січ збільшить ресурс двигунів Русланів і Мрії для ДП Антонов</div>
                     <a href=""></a>
                 </div>
             </li>
+            
             <li>
                 <div class="news-one">
                     <div class="img-container"><img src="imgs/news/news2.png"></div>
                     <div class="content-type">News</div>
                     <div class="date">13/9</div>
-                    <div class="title">Контракт на 920 млн грн. </div>
+                    <div class="title">Контракт на 920 млн грн.2 </div>
                     <div class="description">Мотор Січ збільшить ресурс двигунів Русланів і Мрії для ДП Антонов </div>
                     <a href=""></a>
                 </div>
@@ -123,7 +144,7 @@
                     <div class="img-container"><img src="imgs/news/news3.png"></div>
                     <div class="content-type">News</div>
                     <div class="date">13/9</div>
-                    <div class="title">Контракт на 920 млн грн. </div>
+                    <div class="title">Контракт на 920 млн грн.3</div>
                     <div class="description">Мотор Січ збільшить ресурс двигунів Русланів і Мрії для ДП Антонов </div>
                     <a href=""></a>
                 </div>
@@ -141,16 +162,17 @@
         </div>
     </li>
     <li>
-        <div class="news-list">
+        <div class="news-list ">
             <h3># Другие новости</h3>
             <ul>
-                <li><a href="">Лоукостер Bees Airline получил разрешения для совершения чартеров зимой</a><div class="hr"></div></li>
-                <li><a href="">Лоукостер Bees Airline получил разрешения для совершения чартеров зимой</a><div class="hr"></div></li>
-                <li><a href="">Лоукостер Bees Airline получил разрешения для совершения чартеров зимой</a><div class="hr"></div></li>
-                <li><a href="">Лоукостер Bees Airline получил разрешения для совершения чартеров зимой</a><div class="hr"></div></li>
-                <li><a href="">Лоукостер Bees Airline получил разрешения для совершения чартеров зимой</a><div class="hr"></div></li>
+                <li><a href="">Лоукостер Bees Airline 1</a><div class="hr"></div></li>
+                <li><a href="">Лоукостер Bees Airline 2</a><div class="hr"></div></li>
+                <li><a href="">Лоукостер Bees Airline 3</a><div class="hr"></div></li>
+                <li><a href="">Лоукостер Bees Airline 4</a><div class="hr"></div></li>
+                <li><a href="">Лоукостер Bees Airline 5</a><div class="hr"></div></li>
             </ul>
-            <a href="" class="more-link">Еще новости...</a>
+            <a href="" class="more-link active">Еще новости...</a>
+            <a href="" class="more-link"><b>И еще...</b></a>
         </div>
     </li>
     <li style="clear: both; float: none;"></li>
@@ -160,13 +182,23 @@
 <div id="article-container">
     <ul>
         <li>
-            <div class="news-one">
+            <div class="articles active">
                 <img src="imgs/articles/air.jpg">
                 <div class="title">SkyUp собрался в столицу Испании: </div>
                 <div class="description">с 18 октября анонсирован запуск регулярных рейсов из Киева в столицу Испании Мадрид.</div>
                 <div class="content-type">Статьи</div>
                 <div class="date">13/9</div>
                 <a href=""></a>
+            </div>
+            <div class="articles">
+                    <img src="imgs/articles/air2.jpg">
+                    <div class="title">В столицу Испании: </div>
+                    <div class="description">Рейсы из Киева в столицу Испании Мадрид.</div>
+                    <div class="content-type">Статьи</div>
+                    <div class="date">13/9</div>
+                    <a href=""></a>
+            </div>
+                
         </li>
     </ul>
 </div>
@@ -181,7 +213,7 @@
             <div class="content-type">News</div>
             <div class="date">13/9</div>
             <div class="title">Контракт на 920 млн грн. </div>
-            <div class="description">Мотор Січ збільшить ресурс двигунів Русланів і Мрії для ДП Антонов </div>
+            <div class="description"><b>Мотор Січ збільшить ресурс двигунів Русланів і Мрії для ДП Антонов</b></div>
             <a href=""></a>
         </div>
     </li>
@@ -253,6 +285,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script src="js/mobile.js"></script>
+<script src="js/slider.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Bebas";
+    src: url("../fonts/Bebas Neue Cyrillic Regular.woff2") format("woff2"),
+    url("../fonts/Bebas Neue Cyrillic Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2"),
+    url("../fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff");
+}

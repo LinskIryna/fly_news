@@ -79,10 +79,16 @@ select {
 
 /* ======================================= */
 
+body {
+    font-family: "Open Sans", regular;
+}
+
 #site-container {
     width: 1157px;
     margin: 0 auto;
+    overflow: hidden;
 }
+
 
 #header {
     display: flex;
@@ -109,6 +115,7 @@ select {
 
     nav .submenu li {
         display: none;
+        padding: 5px 10px;
     }
 
     nav .submenu li {
@@ -117,13 +124,13 @@ select {
 
     nav .submenu li a {
         text-decoration: none;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     nav .menu-list {
         display: flex;
         list-style: none;
-        padding: 5px 60px 5px 145px;
+        padding: 18px 60px 5px 145px;
     }
 
     nav .menu-list li:hover {
@@ -148,10 +155,15 @@ select {
         font-size: 18px;
         text-transform: uppercase;
         margin-right: 0;
+        font-family: "Open Sans", regular;
+        font-size: 18px;
+        font-weight: 700;
+
     }
 
     nav .menu-list > li {
         margin-right: 25px;
+        min-width: 90px;
     }
 
 
@@ -209,6 +221,51 @@ ul.social {
     position: relative;
 }
 
+ {
+   
+}
+
+
+  
+.next:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 50%;
+  }
+
+.prev:hover {
+    background-color: #37495b;
+    color: black;
+    border-radius: 50%;
+  }
+
+  
+.prev {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: absolute;
+    top: 300px;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 50%;
+    }
+  
+.next {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: absolute;
+    top: 300px;
+    right: 182px;
+    background-color: #37495b;
+    color: white;
+    border-radius: 50%;
+    
+  }
+  
+
+
 #banners h2 {
     position: absolute;
     bottom: 0;
@@ -219,6 +276,8 @@ ul.social {
     width: 754px;
     font-weight: normal;
     text-transform: uppercase;
+    /*font-family: 'Bebas Neue', cursive;*/
+    font-family: 'Bebas', cursive;
 }
 
 #banners img {
@@ -229,20 +288,27 @@ ul.social {
 /** ====================  BANNERS  ===================  **/
 
 #banners {
+    overflow: hidden;
+}
+
+#banners > #line{
     position: relative;
+    width: 2000000px;
+    left: 0;
 }
 
 #banners .banner.active {
-    opacity: 1;
+     opacity: 1; 
 }
 
 #banners .banner {
-    width: 100%;
+    width: 1157px;
     height: 495px;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    opacity: 0;
+    opacity: 1; 
+    float: left;
 }
 
 #banners .banner img {
@@ -262,6 +328,15 @@ ul.social {
 
 
 /** ====================  NEWS  ===================  **/
+
+
+.news-list h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Bebas', cursive;
+
+}
+
 
 .news-list-container {
     display: flex;
@@ -295,11 +370,19 @@ ul.social {
     right: 0;
 }
 
+
+
 .news-list-container .title, #favorite-article-block .title {
     color: #040404;
     font-size: 25px;
     padding: 0 0 35px;
     text-transform: uppercase;
+    font-family: 'Bebas', cursive;
+}
+
+.news-list-container .title.active {
+    color: aqua;
+    opacity: 0;
 }
 
 .img-container {
@@ -331,7 +414,7 @@ ul.social {
 #favorite-article-block h3 {
     font-size: 24px;
     color: #445466;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 }
 
 #favorite-article-block .news-list {
@@ -370,6 +453,14 @@ ul.social {
     text-decoration: none;
 }
 
+#favorite-article-block .news-list .more-link.active {
+    opacity: 1;
+}
+
+#favorite-article-block .news-list .more-link {
+    opacity: 0;
+}
+
 #article-container {
     background-color: #000;
     clear: both;
@@ -402,12 +493,15 @@ ul.social {
     position: relative;
     margin-top: 37px;
     line-height: 35px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Bebas', cursive;
 }
 
 #article-container .content-type, #article-container .date {
     color: #fff;
-    font-size: 18px;
-    padding: 10px 0;
+    font-size: 14px;
+    padding: 20px 0;
 }
 
 #article-container .date {
@@ -416,10 +510,32 @@ ul.social {
     right: 50px;
 }
 
-.news-one {
+.news-one .articles {
     height: 240px;
     position: relative;
+    }
+
+#article-container .articles {
+    height: 240px;
+    position: absolute;
+    }
+
+#article-container {
+    height: 400px;
+    }
+
+
+#article-container .articles {
+    opacity: 0;
 }
+
+#article-container .articles.active {
+    opacity: 1;
+}
+
+
+      
+   
 
 #article-container .title {
     padding-top: 30px;
@@ -445,10 +561,12 @@ footer .column {
 
 footer .p {
     padding: 10px 20px;
+    font-size: 14px;
 }
 
 footer p {
     padding: 10px 0;
+    font-size: 14px;
 }
 
 #footer-logo {
@@ -462,6 +580,7 @@ footer p {
 .br {
     height: 40px;
 }
+
 
 
 
